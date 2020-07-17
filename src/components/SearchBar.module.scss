@@ -1,0 +1,31 @@
+.SearchBar {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: #607d8b75;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+
+  &__title {
+    margin-top: 0;
+    width: 100%;
+    color: gray;
+  }
+
+  &__input {
+    flex-grow: 4;
+    margin-right: 1rem;
+    padding: 0.5rem;
+  }
+
+  &__select {
+    flex-grow: 2;
+    margin-right: 1rem;
+  }
+
+  &__button {
+    flex-grow: 2;
+  }
+}
