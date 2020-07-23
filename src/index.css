@@ -9,9 +9,11 @@ body {
 }
 
 #root {
+  background-image: url(./assets/background.jpg);
+  background-attachment: scroll;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100%;
   width: 100%;
 }

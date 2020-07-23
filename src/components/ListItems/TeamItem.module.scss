@@ -1,9 +1,7 @@
-.clearLink {
-  color: black;
-  text-decoration: none;
-}
-
 .TeamItem {
+  @media (max-width: 1100px) {
+    justify-content: center;
+  }
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -12,10 +10,16 @@
   background-color: white;
 
   &__logo {
-    width: 30%;
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    margin: 1rem 3rem 1rem 3rem;
   }
 
   &__data {
+    @media (max-width: 1100px) {
+      width: 50%;
+    }
     padding: 1.5rem 1rem;
     width: 50%;
     display: flex;
@@ -31,9 +35,18 @@
   }
 
   &__button {
+    @media (max-width: 1100px) {
+      width: 25%;
+    }
+    color: black;
+    text-decoration: none;
     width: 10%;
     align-self: center;
     cursor: pointer;
     padding: 0.5rem 0;
+    text-align: center;
+    border: 1px black solid;
+    background-color: #efefef;
+    border-radius: 2px;
   }
 }

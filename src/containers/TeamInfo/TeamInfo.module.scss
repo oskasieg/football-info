@@ -1,0 +1,161 @@
+.TeamInfo {
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  width: 70%;
+  min-height: 90%;
+  background-color: #607d8b75;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  .title {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+  // pierwszy panel - Logo
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .subtitle {
+      font-size: 1.2em;
+      color: white;
+    }
+
+    .logo {
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+  &__panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+
+    // drugi panel - Informations
+    .informations {
+      @media (min-width: 1600px) {
+        width: 60%;
+        margin-bottom: 4rem;
+      }
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #80808061;
+      margin: 0.5rem;
+      border-radius: 5px;
+      border-bottom: 2px solid white;
+
+      p {
+        font-size: 1.1em;
+        color: white;
+      }
+
+      .title {
+        text-align: center;
+        width: 100%;
+        font-size: 1.5em;
+        color: white;
+        font-weight: bold;
+        margin: 0;
+        box-shadow: 0px 2px 0px white;
+      }
+
+      .left {
+        width: 50%;
+        text-align: left;
+        font-weight: bold;
+      }
+      .right {
+        width: 50%;
+        text-align: right;
+      }
+    }
+
+    // trzeci panel - Footballers
+    .squad {
+      @media (min-width: 1600px) {
+        width: 60%;
+        margin-bottom: 4rem;
+      }
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #80808061;
+      margin: 0.5rem;
+      border-radius: 5px;
+      border-bottom: 2px solid white;
+    }
+
+    .title {
+      text-align: left;
+      width: 100%;
+      font-size: 1.5em;
+      color: white;
+      font-weight: bold;
+      margin: 1rem 0 0;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2em;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      margin: 0 1rem;
+    }
+
+    .section {
+      overflow-x: auto;
+      width: 100%;
+      margin: 0.5rem 0 1rem 0;
+      display: flex;
+      justify-content: flex-start;
+      padding: 1rem 1rem 0 1rem;
+      border: 2px white solid;
+      border-radius: 5px;
+      background-color: #ffffff26;
+
+      &__element {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem;
+        .circle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: solid black;
+          border: solid #ffeb3b;
+          color: yellow;
+          background-color: #ffff001a;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        .text {
+          text-align: center;
+          font-size: 1.1em;
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

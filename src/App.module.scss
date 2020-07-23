@@ -1,0 +1,20 @@
+.colorLayer {
+  width: 100%;
+  background-color: #00000054;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.App {
+  @media (max-width: 450px) {
+    width: 95%;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  width: 70%;
+  background-color: #cccccc1a;
+  padding: 0 2rem;
+}
