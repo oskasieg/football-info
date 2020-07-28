@@ -7,6 +7,11 @@ Aplikacja, która przedstawia informacje na temat drużyn piłkarskich z poszcze
 * kontenery odpowiadają za pobranie stanu aplikacji oraz rozdzielanie go pomiędzy odpowiednimi komponentami,
 * komponenty obsługują otrzymany stan przez kontenery oraz wywołują odpowiednie akcje.
 
+#### Zewnętrzne API
+
+* *https://www.football-data.org/*,
+* proste, darmowe API, które nie nie zawsze udostępnia wszystkie niezbędne informacje (np. brak zdjęć zawodników).
+
 #### Możliwości:
 
 * wyszukiwanie drużyn z poszczególnych lig,
@@ -20,10 +25,6 @@ Aplikacja, która przedstawia informacje na temat drużyn piłkarskich z poszcze
 * wyświetlenie poszczególnych meczów z ligi oraz wyświetlanie informacji o nich,
 * wiele innych w oparciu o *https://www.football-data.org/documentation/quickstart*
 
-#### Zewnętrzne API
-
-* *https://www.football-data.org/*,
-* proste, darmowe API, które nie nie zawsze udostępnia wszystkie niezbędne informacje (np. brak zdjęć zawodników).
 
 #### Użyte technologie
 
