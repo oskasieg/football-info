@@ -6,7 +6,6 @@ import { connect } from 'react-redux';
 
 class TeamItem extends React.Component {
   render() {
-    console.log(this.props);
     const { id, name, crestUrl, founded, competition, area } = this.props;
 
     return (

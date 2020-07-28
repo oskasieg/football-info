@@ -1,4 +1,4 @@
-import { GET_ALL_COMPETITIONS_REQUEST, GET_TEAMS_FROM_COMPETITION_REQUEST, SET_TEAMS_FROM_COMPETITION } from './constants';
+import { GET_ALL_COMPETITIONS_REQUEST, GET_TEAMS_FROM_COMPETITION_REQUEST, SET_TEAMS_FROM_COMPETITION, CLEAR_TEAMS } from './constants';
 
 // redux-thunk
 export const getAllCompetitionsRequest = () => {
@@ -29,4 +29,8 @@ export const setTeamsFromCompetition = ({ competitionInfo, teams, season }) => (
   competitionInfo,
   items: teams,
   season,
+});
+
+export const clearTeams = () => ({
+  type: CLEAR_TEAMS,
 });

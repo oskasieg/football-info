@@ -1,4 +1,4 @@
-import { GET_ALL_COMPETITIONS_REQUEST, SET_TEAMS_FROM_COMPETITION } from './constants';
+import { GET_ALL_COMPETITIONS_REQUEST, SET_TEAMS_FROM_COMPETITION, CLEAR_TEAMS } from './constants';
 
 const initialState = { items: [], itemsType: '', allCompetitions: [], competitionInfo: {} };
 
@@ -22,6 +22,10 @@ const listItemsReducer = (state = initialState, action) => {
       season: action.season,
       itemsType: 'teams',
     };
+  }
+
+  if (action.type === CLEAR_TEAMS) {
+    return { ...state, items: [], itemsType: '', competitionInfo: {} };
   }
 
   return state;

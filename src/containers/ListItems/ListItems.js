@@ -2,8 +2,14 @@ import React from 'react';
 import styles from './ListItems.module.scss';
 import TeamItem from '../../components/ListItems/TeamItem';
 import { connect } from 'react-redux';
+import { clearTeams } from './actions';
 
 class ListItems extends React.Component {
+  componentWillMount() {
+    const { clearTeams } = this.props;
+    clearTeams();
+  }
+
   render() {
     const { itemsType, items } = this.props;
 
@@ -22,11 +28,13 @@ class ListItems extends React.Component {
   }
 }
 
-//jezeli zmienia sie id w propsach to uruchamia akcje i pobiera wedlug id druzyny
-
 const mapStateToProps = (state) => ({
   items: state.listItemsReducer.items,
   itemsType: state.listItemsReducer.itemsType,
 });
 
-export default connect(mapStateToProps)(ListItems);
+const mapDispatchToProps = (dispatch) => ({
+  clearTeams: () => dispatch(clearTeams()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ListItems);

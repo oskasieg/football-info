@@ -1,0 +1,126 @@
+.Menu {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  &__openButton {
+    position: relative;
+    width: 26px;
+    height: 18px;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  &__openButtonBars {
+    width: 26px;
+    height: 2px;
+    background-color: white;
+  }
+
+  &__openButtonBars::after {
+    content: '';
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: white;
+    top: 16px;
+    position: absolute;
+  }
+
+  &__openButtonBars::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 26px;
+    bottom: 8px;
+    background-color: white;
+  }
+
+  &__container {
+    @media (min-width: 600px) {
+      width: auto;
+    }
+    position: fixed;
+    background-color: #171921;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  &__containerActive {
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 0.2s;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .closeButton {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      margin: 1.5rem 0.5rem;
+
+      .closeButton__bars {
+        width: 26px;
+        height: 3px;
+        background-color: white;
+
+        position: relative;
+        transform: rotate(45deg);
+      }
+      .closeButton__bars:after {
+        transform: rotate(90deg);
+        position: absolute;
+        width: 26px;
+        height: 3px;
+        content: '';
+        background-color: white;
+      }
+    }
+    .options {
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .title {
+      @media (min-width: 600px) {
+        font-size: 1.1em;
+        padding: 0.5rem;
+      }
+      width: 70%;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.5em;
+      background-color: #ffffff4d;
+      border-radius: 7px;
+      border-bottom: solid;
+    }
+
+    .option {
+      @media (min-width: 600px) {
+        font-size: 1.1em;
+        padding: 0.5rem;
+      }
+      width: 70%;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 1.5em;
+      background-color: #8080804d;
+      border-radius: 7px;
+      border-bottom: solid;
+      text-decoration: none;
+    }
+  }
+}

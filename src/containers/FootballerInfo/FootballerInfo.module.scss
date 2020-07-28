@@ -1,0 +1,84 @@
+.FootballerInfo {
+  @media (min-width: 1200px) {
+    width: 80%;
+  }
+  width: 100%;
+  height: 50%;
+  margin-top: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: #607d8b75;
+
+  &__left {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 2rem 0;
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+
+    .row {
+      width: 100%;
+      padding: 0 1rem;
+      text-align: center;
+      margin: 0 0 0.5rem;
+      font-size: 1.2em;
+      color: white;
+    }
+  }
+
+  &__right {
+    flex-basis: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    box-shadow: inset 2px 0px 0px 0px white;
+
+    .title {
+      width: 60%;
+      color: white;
+      font-weight: bold;
+      border-bottom: solid 2px;
+      text-align: center;
+      font-size: 1.2em;
+      padding: 0.5rem;
+    }
+
+    .row__left {
+      @media (min-width: 600px) {
+        width: 45%;
+        text-align: left;
+      }
+      @media (min-width: 1300px) {
+        margin: 1rem 0;
+      }
+      width: 85%;
+      margin: 0;
+      color: white;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .row__right {
+      @media (min-width: 600px) {
+        width: 45%;
+        text-align: right;
+      }
+      @media (min-width: 1300px) {
+        margin: 1rem 0;
+      }
+      width: 85%;
+      margin: 0;
+      color: white;
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+    }
+  }
+}

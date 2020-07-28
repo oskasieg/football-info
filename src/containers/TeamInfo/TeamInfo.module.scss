@@ -20,7 +20,7 @@
     margin-bottom: 0;
   }
 
-  // pierwszy panel - Logo
+  // Logo.js
   &__logo {
     display: flex;
     flex-direction: column;
@@ -41,38 +41,60 @@
   }
 
   &__panel {
+    @media (min-width: 1600px) {
+      justify-content: center;
+    }
     width: 100%;
     display: flex;
-    justify-content: center;
-    overflow-x: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
-    // drugi panel - Informations
+    .menuButton {
+      @media (min-width: 1600px) {
+        width: 28.5%;
+      }
+      text-align: center;
+      width: 30%;
+      font-size: 1.5em;
+      color: white;
+      font-weight: bold;
+      margin: 0;
+      box-shadow: 0px 2px 0px white;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .menuButton:focus {
+      outline: none;
+    }
+    .menuButton__active {
+      background-color: red;
+      border: none;
+      background-color: #24cadf40;
+      border-radius: 5px;
+      transition: all 0.5s;
+      box-shadow: 0px 2px 0px #79fff9;
+    }
+
+    //Informations.js && Contact.js
     .informations {
       @media (min-width: 1600px) {
-        width: 60%;
-        margin-bottom: 4rem;
+        width: 80%;
+        margin-bottom: 2rem;
       }
+      height: 400px;
+      width: 100%;
       padding: 1rem 1.5rem;
       display: flex;
       flex-wrap: wrap;
       background-color: #80808061;
-      margin: 0.5rem;
+      margin: 0 0.5rem 1rem;
       border-radius: 5px;
       border-bottom: 2px solid white;
 
       p {
         font-size: 1.1em;
         color: white;
-      }
-
-      .title {
-        text-align: center;
-        width: 100%;
-        font-size: 1.5em;
-        color: white;
-        font-weight: bold;
-        margin: 0;
-        box-shadow: 0px 2px 0px white;
       }
 
       .left {
@@ -84,76 +106,76 @@
         width: 50%;
         text-align: right;
       }
+      .rightA {
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 1.2em;
+      }
     }
 
-    // trzeci panel - Footballers
-    .squad {
+    // Footballers.js
+    .team {
       @media (min-width: 1600px) {
-        width: 60%;
-        margin-bottom: 4rem;
+        width: 80%;
+        margin-bottom: 2rem;
       }
-      padding: 0.5rem 1.5rem;
+      height: 400px;
+      overflow-y: auto;
+      width: 100%;
+      padding: 1rem 1.5rem;
       display: flex;
       flex-wrap: wrap;
       background-color: #80808061;
-      margin: 0.5rem;
+      margin: 0 0.5rem 1rem;
       border-radius: 5px;
       border-bottom: 2px solid white;
-    }
+      align-content: flex-start;
 
-    .title {
-      text-align: left;
-      width: 100%;
-      font-size: 1.5em;
-      color: white;
-      font-weight: bold;
-      margin: 1rem 0 0;
-    }
+      .team__roleName {
+        font-size: 1.1em;
+        color: white;
+        font-weight: bold;
+        width: 60%;
+      }
 
-    .subtitle {
-      text-align: center;
-      font-size: 1.2em;
-      color: white;
-      font-weight: bold;
-      width: 100%;
-      margin: 0 1rem;
-    }
-
-    .section {
-      overflow-x: auto;
-      width: 100%;
-      margin: 0.5rem 0 1rem 0;
-      display: flex;
-      justify-content: flex-start;
-      padding: 1rem 1rem 0 1rem;
-      border: 2px white solid;
-      border-radius: 5px;
-      background-color: #ffffff26;
-
-      &__element {
+      .team__players {
+        width: 100%;
+        padding: 0.2rem 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 1rem;
-        .circle {
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .player {
+          width: 33%;
           display: flex;
-          align-items: center;
           justify-content: center;
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
-          border: solid black;
-          border: solid #ffeb3b;
-          color: yellow;
-          background-color: #ffff001a;
-          font-size: 1.5rem;
-          font-weight: bold;
-        }
-        .text {
-          text-align: center;
-          font-size: 1.1em;
-          color: white;
-          font-weight: bold;
+          flex-wrap: wrap;
+          .player__avatar {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1em;
+            color: black;
+            &:focus,
+            &:hover,
+            &:visited,
+            &:link,
+            &:active {
+              text-decoration: none;
+            }
+          }
+          .player__name {
+            width: 100%;
+            margin: 0.2rem 0;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+          }
         }
       }
     }

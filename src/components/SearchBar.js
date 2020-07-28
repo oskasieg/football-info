@@ -8,14 +8,6 @@ class SearchBar extends React.Component {
     searchType: 'country',
   };
 
-  /*componentWillReceiveProps = (nextProps) => {
-    if (nextProps.competitions !== this.props.competitions) {
-      this.setState({
-        competitionId: nextProps.competitions[0].id,
-      });
-    }
-  };*/
-
   handleCompetitionClick = (e) => {
     this.setState({
       competitionId: e.currentTarget.value,
