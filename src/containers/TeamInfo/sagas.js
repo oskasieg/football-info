@@ -7,7 +7,7 @@ export default function* teamInfoSaga() {
 }
 
 function* getCurrentTeam(action) {
-  const url = `http://api.football-data.org/v2/teams/${action.id}`;
+  const url = `https://api.football-data.org/v2/teams/${action.id}`;
   try {
     const response = yield call(fetch, url, {
       method: 'GET',

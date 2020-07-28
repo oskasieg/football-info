@@ -7,7 +7,7 @@ export default function* FootballerInfoSaga() {
 }
 
 function* getPlayer(action) {
-  const url = `http://api.football-data.org/v2/players/${action.id}`;
+  const url = `https://api.football-data.org/v2/players/${action.id}`;
   try {
     const response = yield call(fetch, url, {
       method: 'GET',

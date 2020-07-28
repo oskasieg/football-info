@@ -7,7 +7,7 @@ export default function* listItemsSaga() {
 }
 
 function* fetchTeamsFromCompetition(action) {
-  const url = `http://api.football-data.org/v2/competitions/${action.competitionId}/teams`;
+  const url = `https://api.football-data.org/v2/competitions/${action.competitionId}/teams`;
   try {
     const response = yield fetch(url, {
       method: 'GET',
