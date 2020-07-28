@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Football info
 
-## Available Scripts
+Aplikacja, która przedstawia informacje na temat drużyn piłkarskich z poszczególnych lig oraz ich zawodników. Możliwe, że w przyszłości rozwienie się ona o kolejne funkcjonalności. 
 
-In the project directory, you can run:
+#### Aplikacja składa się z kilku kontenerów i wielu komponentów
 
-### `npm start`
+* kontenery odpowiadają za pobranie stanu aplikacji oraz rozdzielanie go pomiędzy odpowiednimi komponentami,
+* komponenty obsługują otrzymany stan przez kontenery oraz wywołują odpowiednie akcje.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Możliwości:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* wyszukiwanie drużyn z poszczególnych lig,
+* przejście do widoku drużyny oraz przegląd informacji, zawodników oraz danych kontaktowych,
+* przejście do widoku zawodnika (poprzez sekcje *Team* w widoku drużyny,
+* proste menu, dzięki któremu można bezpośrednio wrócić na stronę główną.
 
-### `npm test`
+#### Możliwości rozwoju: 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* szukanie strzelców z danej ligi oraz wyświetlenie informacji o nich,
+* wyświetlenie poszczególnych meczów z ligi oraz wyświetlanie informacji o nich,
+* wiele innych w oparciu o *https://www.football-data.org/documentation/quickstart*
 
-### `npm run build`
+#### Zewnętrzne API
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* *https://www.football-data.org/*,
+* proste, darmowe API, które nie nie zawsze udostępnia wszystkie niezbędne informacje (np. brak zdjęć zawodników).
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+#### Użyte technologie
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* HTML5,
+* CSS3, SASS,
+* RWD (media queries),
+* React.JS,
+* React-router-dom,
+* React-redux, redux-saga.
 
-### `npm run eject`
+#### Uruchamienie:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. npm install
+2. npm run dev
