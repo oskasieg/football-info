@@ -2,6 +2,10 @@
 
 Aplikacja, która przedstawia informacje na temat drużyn piłkarskich z poszczególnych lig oraz ich zawodników. Możliwe, że w przyszłości rozwienie się ona o kolejne funkcjonalności. 
 
+## DEMO
+
+*https://football-info-oskasieg.netlify.app/*
+
 #### Aplikacja składa się z kilku kontenerów i wielu komponentów
 
 * kontenery odpowiadają za pobranie stanu aplikacji oraz rozdzielanie go pomiędzy odpowiednimi komponentami,
