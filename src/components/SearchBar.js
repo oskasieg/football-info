@@ -20,7 +20,8 @@ class SearchBar extends React.Component {
     });
   };
 
-  onSubmit = () => {
+  onSubmit = (e) => {
+    e.preventDefault();
     if (!this.state.competitionId) return;
     if (this.state.searchType === 'country') this.props.handleSubmit(this.state.competitionId);
   };
@@ -31,7 +32,7 @@ class SearchBar extends React.Component {
     const { competitions } = this.props;
 
     return (
-      <div className={styles.SearchBar}>
+      <form onSubmit={(e) => this.onSubmit(e)} className={styles.SearchBar}>
         <h3 className={styles.SearchBar__title}>Select competition and type to search data.</h3>
 
         <select className={styles.SearchBar__input} onChange={this.handleCompetitionClick}>
@@ -49,10 +50,10 @@ class SearchBar extends React.Component {
           <option value='other'>Other</option>
         </select>
 
-        <button className={styles.SearchBar__button} type='submit' onClick={this.onSubmit}>
+        <button className={styles.SearchBar__button} type='submit'>
           Find
         </button>
-      </div>
+      </form>
     );
   }
 }

@@ -148,10 +148,11 @@
         flex-wrap: wrap;
 
         .player {
-          width: 33%;
+          width: 32%;
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
+          padding: 0.1rem;
           .player__avatar {
             border-radius: 50%;
             height: 50px;
@@ -169,6 +170,7 @@
               text-decoration: none;
             }
           }
+
           .player__name {
             width: 100%;
             margin: 0.2rem 0;
